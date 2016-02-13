@@ -6,26 +6,32 @@ package List;
  */
 public class List {
 
-    private int data;
+    private int data[];
     private int top;
 
     public List() {
 
-        data = new data [100];
+        data = new int [100];
         top = 0;
         
     }
 
-    public void add(int d) {
+    public void add(int d, int p) {
 
-        data = [d];
+        data [p] = d;
         top++;
         
     }
 
-    public void remove() {
+    public void remove(int p) {
 
+        int d = data [p];
         
+        for(int i= 0; i < top; i++){
+            
+            data [d] = data[d + 1];
+            
+        }
         
     }
 
