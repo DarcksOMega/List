@@ -40,7 +40,7 @@ public class List {
 
     public void print() {
 
-        for (int i = 0; i < top; i++) {
+        for (int i = 0; i < top-1; i++) {
 
             System.out.print(" " + data[i]);
 
