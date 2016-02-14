@@ -11,40 +11,43 @@ public class List {
 
     public List() {
 
-        data = new int [100];
+        data = new int[100];
         top = 0;
-        
+
     }
 
     public void add(int d, int p) {
 
-        data [p] = d;
+        data[p] = d;
         top++;
-        
+
     }
 
-    public void remove(int p) {
+    public int remove(int p) {
 
-        int d = data [p];
-        
-        for(int i= 0; i < top; i++){
-            
-            data [d] = data[d + 1];
-            
+        int d = data[p];
+
+        for (int i = p; i < top; i++) {
+
+            data[i] = data[i + 1];
+
         }
-        
+
+        top--;
+        return data[d];
+
     }
 
     public void print() {
 
-        for(int i = 0; i < top; i++){
-            
+        for (int i = 0; i < top; i++) {
+
             System.out.print(" " + data[i]);
-            
+
         }
-        
+
         System.out.println();
-        
+
     }
 
 }
